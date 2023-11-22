@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+const DropdownList = ['Profile', 'Settings', 'Log Out']
+
 function App() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -15,9 +17,7 @@ function App() {
                     Dropdown <i className="material-icons">arrow_drop_down</i>
                 </div>
                 <ul className="dropdown">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                    <li><a>Item 3</a></li>
+                    {DropdownList.map((obj, index) => <li key={index}><a>{obj}</a></li>)}
                 </ul>
             </div>
         </div>
